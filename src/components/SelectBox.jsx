@@ -14,7 +14,7 @@ export const Title = styled.div`
 
 export const Select = styled.select`
   width: 130px;
-  height: 45px;
+  height: 40px;
   margin: 5px 20px;
   padding: 5px;
 `;

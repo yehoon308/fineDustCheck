@@ -29,7 +29,7 @@ export default function NavBar() {
           to="/react"
           className="text-3xl text-rose-900 font-semibold hover:text-rose-600"
         >
-          공공 API 기상확인
+          공공 API 대기질 확인
         </Link>
       </div>
       <nav className="h-1/3 w-full flex flex-row items-center justify-start space-x-10 p-4">

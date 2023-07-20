@@ -126,7 +126,7 @@ export default function Kids() {
   return (
     <div>
       <SelectBoxWrapper>
-        <SelectBox codeGbn={codeGbn} setCodeGbn={setCodeGbn} memo="구분" />
+        <SelectBox codeGbn={codeGbn} setCodeGbn={setCodeGbn} memo="구분 :" />
 
         <DatePickerWrapper>
           <ReactDatePicker
