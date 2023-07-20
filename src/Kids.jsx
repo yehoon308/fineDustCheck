@@ -126,7 +126,7 @@ export default function Kids() {
   return (
     <div>
       <SelectBoxWrapper>
-        <SelectBox codeGbn={codeGbn} setCodeGbn={setCodeGbn} memo="구분 :" />
+        <SelectBox codeGbn={codeGbn} setCodeGbn={setCodeGbn} memo="구분" />
 
         <DatePickerWrapper>
           <ReactDatePicker
@@ -152,9 +152,13 @@ export default function Kids() {
           pm25Data?.map((item, index) => {
             return (
               <StyledTableRow key={index}>
-                <StyledTd num={1}>{item.dataTime}</StyledTd>
+                <StyledTd num={1}>
+                  {`발표일: ${item.dataTime}`}
+                  <br />
+                  {`예측일자: ${item.informData}`}
+                </StyledTd>
                 <StyledTd num={3}>
-                  <Map />
+                  <Map informGrade={item.informGrade} />
                 </StyledTd>
                 <StyledTd num={1}>{item.informOverall}</StyledTd>
               </StyledTableRow>
