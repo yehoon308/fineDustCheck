@@ -11,9 +11,10 @@ export const DatePickerWrapper = styled.div`
   justify-content: flex-end;
   align-items: center;
   padding-right: 20px;
+  margin-right: 10px;
 
   .date-picker-input {
-    border: solid 1px;
+    border: solid 3px;
     border-radius: 5px;
     width: 100%;
     text-align: center;
@@ -144,9 +145,9 @@ export default function FineDust() {
       </SelectBoxWrapper>
       <StyledTable>
         <StyledTableRow>
-          <StyledTh num={1}>시일</StyledTh>
+          <StyledTh num={1}>시 일</StyledTh>
           <StyledTh num={3}>전국 시황</StyledTh>
-          <StyledTh num={1}>총평</StyledTh>
+          <StyledTh num={1}>설 명</StyledTh>
         </StyledTableRow>
         {pm25Data &&
           pm25Data?.map((item, index) => {
