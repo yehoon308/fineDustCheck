@@ -78,7 +78,7 @@ export const SelectBoxWrapper = styled.div`
   width: 100vw;
 `;
 
-export default function Kids() {
+export default function FineDust() {
   /**
    * ReactDatePicker에서 받은 값을
    * 파라미터로 넣을 string 형식으로
@@ -103,7 +103,7 @@ export default function Kids() {
    */
   const [reqDate, setReqDate] = useState(changeFormat(today));
   // 커스텀 훅을 통한 API 호출
-  const [isLoading, error, kids] = useProducts({ reqDate, isClick });
+  const [isLoading, error, FineDust] = useProducts({ reqDate, isClick });
   // const client = useQueryClient();
 
   if (isLoading) {
@@ -113,8 +113,8 @@ export default function Kids() {
     setIsClick(isClick + 1);
   };
 
-  const itemCount = kids?.response.body.totalCount;
-  const itemList = kids?.response.body.items;
+  const itemCount = FineDust?.response.body.totalCount;
+  const itemList = FineDust?.response.body.items;
   const pm25Data = itemList?.filter((item) => item.informCode === 'PM25');
   console.log(pm25Data, itemList, 'itemInfo');
   const handleChange = (in_date) => {
@@ -165,15 +165,6 @@ export default function Kids() {
             );
           })}
       </StyledTable>
-
-      {/* <button
-        className="border-solid border-slate-600 mt-4 ml-4 p-2"
-        onClick={() => {
-          client.invalidateQueries(['kids', sigun_nm]);
-        }}
-      >
-        새로고침
-      </button> */}
     </div>
   );
 }
