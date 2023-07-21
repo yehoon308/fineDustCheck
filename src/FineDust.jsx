@@ -24,9 +24,10 @@ export const DatePickerWrapper = styled.div`
   }
 
   .searchButton {
-    margin-left: 5vw;
+    margin-left: 2vw;
     padding: 5px 10px;
-    background-color: #588dd7;
+    background-color: #444444;
+    color: #ffffff;
     border: 1px solid;
     border-radius: 5px;
   }
@@ -39,10 +40,10 @@ export const DatePickerWrapper = styled.div`
 //   width: 100%;
 // `;
 export const StyledTable = styled.div`
-  padding: 1rem;
+  padding: 2rem;
   border-radius: 1rem;
-  display: flex;
-  flex-direction: column;
+  background: linear-gradient(90deg, #dbe7fc 0%, #f2f2f2 50%, #dbe7fc 100%);
+  overflow-x: auto;
 `;
 
 export const StyledTableRow = styled.div`
@@ -54,7 +55,7 @@ export const StyledTh = styled.div`
   align-items: center;
   justify-content: center;
   flex: ${(props) => props.num || 1};
-  background-color: #94a1da25;
+  background-color: #b8d0fa;
   font-weight: 600;
   border: 1px solid;
   margin: 0 auto;
