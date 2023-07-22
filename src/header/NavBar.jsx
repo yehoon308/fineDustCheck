@@ -49,7 +49,7 @@ export default function NavBar() {
       </div>
       <nav className="h-1/3 w-full flex flex-row items-center justify-start space-x-10 p-4">
         <Link
-          to="/react/kids"
+          to="/fineDustCheck/fineDust"
           className="text-pink-500 hover:text-pink-400 font-semibold hover:origin-center hover:rotate-12"
         >
           기상센터
