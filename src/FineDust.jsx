@@ -123,7 +123,7 @@ export default function FineDust() {
 
   const pm25Data = itemList?.filter((item) => item.informCode === codeGbn);
 
-  console.log(pm25Data, itemList, 'itemInfo');
+  console.log(pm25Data, itemList, codeGbn, 'itemInfo');
   const handleChange = (in_date) => {
     const date = changeFormat(in_date);
     setSelectDate(in_date);
