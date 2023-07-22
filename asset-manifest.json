@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/fineDustCheck/static/css/main.45ecff78.css",
+    "main.js": "/fineDustCheck/static/js/main.43f38d36.js",
+    "static/media/spinner.gif": "/fineDustCheck/static/media/spinner.57518e6b55bb07694207.gif",
+    "index.html": "/fineDustCheck/index.html",
+    "main.45ecff78.css.map": "/fineDustCheck/static/css/main.45ecff78.css.map",
+    "main.43f38d36.js.map": "/fineDustCheck/static/js/main.43f38d36.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.45ecff78.css",
+    "static/js/main.43f38d36.js"
+  ]
+}
