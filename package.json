@@ -2,7 +2,7 @@
   "name": "basic",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://doondoong.github.io/react",
+  "homepage": "https://yehoon308.github.io/fineDustCheck/",
   "scripts": {
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build",
