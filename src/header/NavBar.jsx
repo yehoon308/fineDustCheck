@@ -32,10 +32,9 @@ export default function NavBar() {
   return (
     <NavWrapper>
       <div className="mt-3 h-2/3 flex flex-row justify-center">
-        <IconWrapper className="text-4xl text-yellow-500 font-semibold">
+        <IconWrapper className="text-5xl text-yellow-400 ">
           <FaSun />
         </IconWrapper>
-        <br />
         <LinkWrapper>
           <Link
             to="/react"
@@ -44,7 +43,7 @@ export default function NavBar() {
             공공 API 대기질 확인
           </Link>
         </LinkWrapper>
-        <IconWrapper className="text-4xl text-yellow-500 font-semibold">
+        <IconWrapper className="text-5xl text-yellow-400 ">
           <FaSun />
         </IconWrapper>
       </div>
