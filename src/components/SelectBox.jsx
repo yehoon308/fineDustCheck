@@ -33,8 +33,8 @@ export default function SelectBox({ codeGbn, setCodeGbn, memo }) {
         name="choice"
         className="bg-gray-300 hover:bg-gray-400 rounded-lg w-36 h-8 border border-gray-500"
       >
-        <option value="PM10 ">미세먼지</option>
-        <option value="PM25">초미세먼지</option>
+        <option value="PM25 ">미세먼지</option>
+        <option value="PM10">초미세먼지</option>
         <option value="O3">오존</option>
       </Select>
     </SelectBoxWrapper>

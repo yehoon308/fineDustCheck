@@ -98,14 +98,17 @@ export default function FineDust() {
   // ReactDatePicker의 value값을 useState로 저장
   const [selectDate, setSelectDate] = useState(today);
   const [isClick, setIsClick] = useState(0);
-  const [codeGbn, setCodeGbn] = useState('PM10');
+  const [codeGbn, setCodeGbn] = useState('PM25');
   /**
    * ReactDatePicker에서 선택한 값을
    * changeFormat 함수를 이용해 'YYYY-MM-DD' 형태로 변경
    */
   const [reqDate, setReqDate] = useState(changeFormat(today));
   // 커스텀 훅을 통한 API 호출
-  const [isLoading, error, FineDust] = useProducts({ reqDate, isClick });
+  const [isLoading, error, fineDust] = useProducts({
+    reqDate,
+    isClick,
+  });
   // const client = useQueryClient();
 
   if (isLoading) {
@@ -115,9 +118,11 @@ export default function FineDust() {
     setIsClick(isClick + 1);
   };
 
-  const itemCount = FineDust?.response.body.totalCount;
-  const itemList = FineDust?.response.body.items;
-  const pm25Data = itemList?.filter((item) => item.informCode === 'PM25');
+  const itemCount = fineDust?.response.body.totalCount;
+  const itemList = fineDust?.response.body.items;
+
+  const pm25Data = itemList?.filter((item) => item.informCode === codeGbn);
+
   console.log(pm25Data, itemList, 'itemInfo');
   const handleChange = (in_date) => {
     const date = changeFormat(in_date);

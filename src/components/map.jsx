@@ -100,8 +100,6 @@ function Map({ informGrade }) {
     data.push({ name, state, locale, count });
   });
 
-  console.log(data, 'data');
-
   const setColorByCount = (count) => {
     if (count < 101) return '#495ee9';
     if (count >= 5000 && count < 10000) return '#49e976';

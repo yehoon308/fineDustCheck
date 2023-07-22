@@ -24,7 +24,7 @@ export default function useProducts({ reqDate, isClick }) {
   const {
     isLoading,
     error,
-    data: kids,
+    data: fineDust,
     // refetch,
   } = useQuery(
     ['dust', isClick],
@@ -37,5 +37,5 @@ export default function useProducts({ reqDate, isClick }) {
     // },
   );
 
-  return [isLoading, error, kids];
+  return [isLoading, error, fineDust];
 }
