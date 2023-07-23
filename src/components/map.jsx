@@ -101,9 +101,9 @@ function Map({ informGrade }) {
   });
 
   const setColorByCount = (count) => {
-    if (count < 101) return '#495ee9';
-    if (count >= 5000 && count < 10000) return '#49e976';
-    if (count >= 10000) return '#e99c49';
+    if (count < 101) return '#5a9ae8';
+    if (count >= 5000 && count < 10000) return '#e5e158';
+    if (count >= 10000) return '#e96149';
     else return '#ebfffd';
   };
   return (

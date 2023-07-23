@@ -6,6 +6,7 @@ import ReactDatePicker from 'react-datepicker';
 import styled from 'styled-components';
 import Map from './components/map';
 import SelectBox from './components/SelectBox';
+import { Row, Col } from 'react-bootstrap';
 
 export const DatePickerWrapper = styled.div`
   display: flex;
@@ -41,7 +42,7 @@ export const DatePickerWrapper = styled.div`
 //   width: 100%;
 // `;
 export const StyledTable = styled.div`
-  padding: 2rem;
+  padding: 0 2rem 2rem;
   border-radius: 1rem;
   background: linear-gradient(90deg, #dbe7fc 0%, #f2f2f2 50%, #dbe7fc 100%);
   overflow-x: auto;
@@ -79,6 +80,14 @@ export const SelectBoxWrapper = styled.div`
   justify-content: flex-end;
   height: 4rem;
   width: 100vw;
+`;
+export const InfoTextBox = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 1rem;
+  margin: 0.7rem;
 `;
 
 export default function FineDust() {
@@ -133,24 +142,30 @@ export default function FineDust() {
 
   return (
     <div>
-      <SelectBoxWrapper>
-        <SelectBox codeGbn={codeGbn} setCodeGbn={setCodeGbn} memo="구분 :" />
+      <Row>
+        <SelectBoxWrapper>
+          <SelectBox codeGbn={codeGbn} setCodeGbn={setCodeGbn} memo="구분 :" />
 
-        <DatePickerWrapper>
-          <ReactDatePicker
-            className="date-picker-input"
-            locale="ko"
-            dateFormatCalendar="yyyy년 MM월"
-            dateFormat="yyyy-MM-dd"
-            selected={selectDate}
-            onChange={(date) => handleChange(date)}
-          />
-          <button className="searchButton" onClick={handleClick}>
-            조회
-          </button>
-        </DatePickerWrapper>
-      </SelectBoxWrapper>
+          <DatePickerWrapper>
+            <ReactDatePicker
+              className="date-picker-input"
+              locale="ko"
+              dateFormatCalendar="yyyy년 MM월"
+              dateFormat="yyyy-MM-dd"
+              selected={selectDate}
+              onChange={(date) => handleChange(date)}
+            />
+            <button className="searchButton" onClick={handleClick}>
+              조회
+            </button>
+          </DatePickerWrapper>
+        </SelectBoxWrapper>
+      </Row>
+
       <StyledTable>
+        <Row>
+          <InfoTextBox>🟧나쁨 🟨보통 🟦좋음</InfoTextBox>
+        </Row>
         <StyledTableRow>
           <StyledTh num={1}>시 일</StyledTh>
           <StyledTh num={3}>전국 시황</StyledTh>
