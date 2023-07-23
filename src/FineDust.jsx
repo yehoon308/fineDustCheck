@@ -6,6 +6,7 @@ import ReactDatePicker from 'react-datepicker';
 import styled from 'styled-components';
 import Map from './components/map';
 import SelectBox from './components/SelectBox';
+
 export const DatePickerWrapper = styled.div`
   display: flex;
   justify-content: flex-end;

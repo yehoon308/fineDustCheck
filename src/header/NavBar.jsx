@@ -37,7 +37,7 @@ export default function NavBar() {
         </IconWrapper>
         <LinkWrapper>
           <Link
-            to="/react"
+            to="/fineDustCheck"
             className="text-4xl text-pink-500 font-semibold hover:text-pink-400"
           >
             공공 API 대기질 확인
